@@ -1,0 +1,12 @@
+// Base Styles
+@import '0-base/var.scss';
+@import '0-base/default.scss';
+
+
+//Module Styles
+@import '1-module/background-img.scss';
+@import '1-module/nav.scss';
+
+//Layout Styles
+@import '3-layout/homepage.scss';
+@import '3-layout/recipe-dashboard.scss'

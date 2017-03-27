@@ -1,0 +1,52 @@
+.homepage {
+    .made-in-usa {
+        position: absolute;
+        top: 5%;
+        left: 2%;
+        width: 235px;
+    }
+
+    .jumbotron-wrapper {
+        overflow: hidden;
+
+        img {
+            height: 100vh;
+            object-fit: cover;
+            width: 100%;
+        }
+
+        .inspiration-wrapper {
+            position: absolute;
+            bottom: 10%;
+            right: 0;
+            text-align: right;
+
+            li {
+                @include oswald-light;
+                margin-bottom: 1.5em;
+                font-size: 18px;
+
+                i {
+                    border-right: 1px solid rgba(255, 255, 255, 0.35);
+                    font-size: 36px;
+                    vertical-align:sub;
+                    margin-right: .5em;
+                    padding-right: 0.3em;
+                }
+
+                a {
+                    color: $white;
+                    padding: 1.3em 1.3em 1.3em 0.6em;
+                }
+
+                .bbq-saser {
+                    background: $blue;
+                }
+
+                .recept {
+                    background: $red;
+                }
+            }
+        }
+    }
+}

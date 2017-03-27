@@ -1,0 +1,154 @@
+.nav-container {
+    position: fixed;
+    z-index: 2;
+
+    div {
+        padding: 1.5em;
+
+        .burger-button {
+            background: $blue;
+            display: inline-block;
+            height: 50px;
+            width: 50px;
+            position: relative;
+
+            span {
+                background: $white;
+                border-radius: 0;
+                display: inline-block;
+                height: 2px;
+                position: absolute;
+                left: 18%;
+                transition-duration: 200ms;
+                width: 65%;
+            }
+            .first {
+                top: 14px;
+            }
+            .second {
+                top: 24px;
+            }
+
+            .third {
+                top: 34px;
+            }
+        }
+
+        .burger-button.active {
+            background: $dark-blue;
+
+            .first {
+                transform: rotate(-45deg);
+                top: 24px;
+            }
+            .second {
+                opacity: 0;
+                zoom: 1;
+            }
+
+            .third {
+                transform: rotate(45deg);
+                top: 24px;
+            }
+        }
+
+        .recipe-category-dropdown {
+            display: inline-block;
+            padding: 0;
+
+            button {
+                background: $blue;
+                border: 0;
+                color: $white;
+                padding: 1.3em 2em;
+            }
+
+            .dropdown-menu {
+                background: rgba(255, 255, 255, 0.9);
+                border-radius: 0;
+                top: 62px;
+                width: 160px;
+                left: -62px;
+
+                a {
+                    @include roboto-bold;
+                    transition: all .1s ease-in-out;
+
+                    i {
+                        font-size: 20px;
+                        margin-right: 5px;
+                    }
+
+                    &:hover {
+                        background: $red;
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.main-nav {
+    background: rgba(255, 255, 255, 0.9);
+    height: 100%;
+    padding: 2em 3em;
+    position: fixed;
+    left: -1500px;
+    z-index: 1;
+
+    .nav-menu {
+        margin-top: 6em;
+        text-align: center;
+
+        li {
+            @include oswald-regular;
+            margin-bottom: 1.5em;
+            font-size: 21px;
+
+            a {
+                color: $blue;
+
+                &:hover {
+                    border-bottom: 3px solid $red;
+                    font-weight: 500;
+                    padding-bottom: 5px;
+                    transition: all .1s ease-in-out;
+                }
+            }
+        }
+    }
+    .follow-fb {
+        margin-top: 10em;
+        text-align: center;
+
+        a {
+            color: $blue;
+
+            i {
+                border: 2px solid $blue;
+                display: inline-block;
+                font-size: 18px;
+                padding: .5em;
+            }
+
+            span {
+                @include roboto-bold;
+                display: block;
+                margin-top: 10px;
+            }
+        }
+    }
+}
+
+.main-nav.active {
+    left: 0;
+}
+
+.overlay.active {
+    background: rgba(0, 0, 0, 0.65);
+    position: fixed;
+    height: 100%;
+    width: 100%;
+}

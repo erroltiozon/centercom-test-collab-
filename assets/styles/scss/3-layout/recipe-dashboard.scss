@@ -1,0 +1,53 @@
+.recipe-dashboard {
+
+    .recipe-container {
+        margin-top: 8em;
+        padding: 0 2em;
+        position: relative;
+
+        li {
+
+            margin-bottom: 2em;
+
+            a {
+                display: inline-block;
+                height: 100%;
+                position: relative;
+
+                img {
+                    width: 100%;
+                }
+
+                .recipe-snippet {
+                    @include roboto-bold;
+                    background: rgba(0, 0, 0, 0.65);
+                    color: $white;
+                    padding: 1.5em;
+                    position: absolute;
+                    bottom: 0;
+                    width: 100%;
+
+                    span {
+                        @include roboto-light;
+                        display: inline-block;
+                        margin-bottom: .5em;
+                    }
+
+                    h4 {
+                        font-weight: 700;
+                    }
+                }
+
+                &:hover .recipe-snippet {
+                    background: rgba(192, 0, 21, 0.75);
+                }
+            }
+        }
+    }
+
+    .made-in-usa {
+        position: absolute;
+        top: 7em;
+        width: 150px;
+    }
+}
