@@ -1,0 +1,75 @@
+.login-wrapper{
+	position: relative;
+	.row{
+		margin-top: 6em;
+		margin-bottom: 6em;
+
+		.form-content{
+			background: $white;
+			padding: 5em 3em 3em;
+			float: none;
+			margin: 0 auto;
+
+
+			header{
+				@include oswald-regular;
+				margin-bottom: 1em;
+				line-height: 24px;
+			}
+
+			.login-logo{
+				width: 150px;
+			    left: -1em;
+			    position: absolute;
+			    top: -2%;
+			    z-index: 2;
+			}
+
+			ul {
+				padding: 20px;
+				max-width: 100%;
+
+				li{
+					margin: 0 auto;
+					text-align: left;
+					width: 85%;
+
+					label{
+						display: inherit;
+						font-weight: inherit;
+					    margin-top: 5px;
+					    margin-bottom: 0;
+					}
+
+					textarea{
+						border-radius: 5px;
+						padding: 22px;
+						width: 100%;
+					}
+				}
+			}
+
+			button{
+				margin-top: 44px;
+			    margin-bottom: 25px;
+			    width: 50%;
+			    padding: 1em 0;
+			}
+
+			p{
+				margin: 5px;
+			}
+
+			span{
+				color: red;
+				font-weight: bold;
+			}
+		}
+
+		div {
+			float: none;
+			margin: 0 auto;
+			padding: 0;
+		}
+	}
+}
