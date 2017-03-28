@@ -207,4 +207,55 @@ a {
   top: 7em;
   width: 150px; }
 
+.login-form {
+  font-family: "Roboto Slab", serif;
+  font-weight: 300;
+  margin: 0 auto;
+  position: relative; }
+  .login-form .wrapper {
+    float: none;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); }
+  .login-form form {
+    background: white;
+    left: 50%;
+    padding: 3em 4em;
+    margin-top: 35em;
+    margin-bottom: 0;
+    transform: translate(-50%, -50%);
+    top: 50%; }
+    .login-form form .login-logo {
+      left: -1em;
+      position: absolute;
+      top: -3%;
+      width: 150px;
+      z-index: 2; }
+  .login-form .form-content {
+    padding: 15px;
+    text-align: center; }
+    .login-form .form-content h1 {
+      font-family: "Roboto Slab", serif;
+      font-weight: 700;
+      padding: 20px; }
+  .login-form .form-list {
+    width: 90%;
+    margin: 0 auto;
+    padding: 15px;
+    text-align: left; }
+    .login-form .form-list textarea {
+      border-radius: 5px;
+      height: 100px;
+      padding: .5em 1em;
+      width: 100%; }
+  .login-form button {
+    width: 48%;
+    margin-bottom: 2em;
+    padding: 1em 2em; }
+  .login-form span {
+    color: #c00015;
+    font-weight: bold; }
+  .login-form .contact-wrapper {
+    padding-bottom: 20px; }
+
 /*# sourceMappingURL=main.css.map */
