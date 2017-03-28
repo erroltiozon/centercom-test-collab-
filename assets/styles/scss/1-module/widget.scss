@@ -1,0 +1,15 @@
+.widget-wrapper {
+    margin-top: 1.5em;
+
+    .widget {
+        margin-right: .5em;
+    }
+
+    .print, .share {
+        @include roboto-bold;
+        background: none;
+        border: 0;
+        color: $red;
+        padding: 0;
+    }
+}

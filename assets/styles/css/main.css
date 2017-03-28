@@ -26,7 +26,21 @@ a {
 .main-wrapper .background-img {
   background: url("../../../assets/img/background_img.jpg");
   background-size: cover;
-  height: 100%; }
+  height: 100%;
+  min-height: 100vh;
+  position: relative; }
+
+.widget-wrapper {
+  margin-top: 1.5em; }
+  .widget-wrapper .widget {
+    margin-right: .5em; }
+  .widget-wrapper .print, .widget-wrapper .share {
+    font-family: "Roboto Slab", serif;
+    font-weight: 700;
+    background: none;
+    border: 0;
+    color: #c00015;
+    padding: 0; }
 
 .nav-container {
   position: fixed;
@@ -137,6 +151,23 @@ a {
   height: 100%;
   width: 100%; }
 
+.main-wrapper .fb-link {
+  font-family: "Roboto Slab", serif;
+  font-weight: 700;
+  background: rgba(0, 69, 131, 0.85);
+  color: #ffffff;
+  padding: 1.5em 2em;
+  position: fixed;
+  bottom: 0;
+  right: 1%; }
+  .main-wrapper .fb-link i {
+    border: 2px solid #ffffff;
+    font-size: 16px;
+    margin-right: .5em;
+    padding: .5em; }
+  .main-wrapper .fb-link:hover {
+    background: #006dd0; }
+
 .homepage .made-in-usa {
   position: absolute;
   top: 5%;
@@ -206,5 +237,33 @@ a {
   position: absolute;
   top: 7em;
   width: 150px; }
+
+.article-wrapper {
+  position: relative; }
+  .article-wrapper .row {
+    margin-top: 6em;
+    margin-bottom: 6em; }
+    .article-wrapper .row div {
+      float: none;
+      margin: 0 auto;
+      padding: 0; }
+    .article-wrapper .row .context {
+      background: #ffffff;
+      padding: 5em 3em 3em;
+      position: relative; }
+      .article-wrapper .row .context header {
+        font-family: "Oswald", sans-serif;
+        font-weight: 300;
+        margin-bottom: 2em; }
+      .article-wrapper .row .context p {
+        font-family: "Roboto Slab", serif;
+        font-weight: 300;
+        margin-bottom: 1em;
+        line-height: 24px; }
+      .article-wrapper .row .context .made-in-usa {
+        position: absolute;
+        top: -1em;
+        left: -3em;
+        width: 150px; }
 
 /*# sourceMappingURL=main.css.map */

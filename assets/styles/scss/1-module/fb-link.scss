@@ -1,0 +1,20 @@
+.main-wrapper .fb-link {
+    @include roboto-bold;
+    background: rgba(0, 69, 131, 0.85);
+    color: $white;
+    padding: 1.5em 2em;
+    position: fixed;
+    bottom: 0;
+    right: 1%;
+
+    i {
+        border: 2px solid $white;
+        font-size: 16px;
+        margin-right: .5em;
+        padding: .5em;
+    }
+
+    &:hover {
+        background: lighten($blue, 15%);
+    }
+}

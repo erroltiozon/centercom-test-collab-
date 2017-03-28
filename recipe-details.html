@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Homepage</title>
+    <title>Recipe Details</title>
     <!-- Google Fonts Start -->
     <link href="https://fonts.googleapis.com/css?family=Oswald:300,400|Roboto+Slab:300,700" rel="stylesheet">
     <!-- Google Fonts End  -->
@@ -14,7 +14,7 @@
 </head>
 <body>
     <nav class="nav-container col-lg-12 col-md-12 col-sm-12 col-xs-12">
-        <div class="col-md-6">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
             <a href="#" class="burger-button">
                 <span class="first"></span>
                 <span class="second"></span>
@@ -49,26 +49,19 @@
     </section>
     <div class="overlay"></div>
     <!-- Start Content-Markup Here  -->
-    <article class="main-wrapper homepage">
-        <img class="made-in-usa" src="assets/img/made_in_usa.png" alt="">
-        <section class="jumbotron-wrapper">
-            <img src="assets/img/start_background_img_PLACEHOLDER.jpg" alt="">
-            <ul class="inspiration-wrapper">
-                <li>
-                    <a class="bbq-saser" href="">
-                        <i class="icon-bottle"></i>
-                        <span>Våra BBQ-såser</span>
-                    </a>
-                </li>
-                <li>
-                    <a class="recept" href="recipe-dashboard.html">
-                        <i class="icon-hamburger"></i>
-                        <span>Recept & Inspiration</span>
-                    </a>
-                </li>
-            </ul>
-        </section>
+    <article class="main-wrapper recipe-details">
+            <section class="row">
+                <section class="recipe-cover-img col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <img class="img-responsive" src="assets/img/recipe_img_L_PLACEHOLDER.jpg" alt="">
+                </section>
+                <section class="details col-lg-6"></section>
+            </section>
+            <a class="fb-link" href="">
+                <i class="icon-facebook"></i>
+                Tävla & Vinn en BBQ-smoker!
+            </a>
     </article>
+    <!--  End   -->
     <script src="assets/components/jquery/dist/jquery.min.js"></script>
     <script src="assets/components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="assets/js/nav.js"></script>

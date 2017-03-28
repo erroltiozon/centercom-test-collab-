@@ -1,0 +1,37 @@
+.article-wrapper {
+    position: relative;
+    .row {
+        margin-top: 6em;
+        margin-bottom: 6em;
+
+        div {
+            float: none;
+            margin: 0 auto;
+            padding: 0;
+        }
+
+        .context {
+            background: $white;
+            padding: 5em 3em 3em;
+            position: relative;
+
+            header {
+                @include oswald-regular;
+                margin-bottom: 2em;
+            }
+
+            p {
+                @include roboto-light;
+                margin-bottom: 1em;
+                line-height: 24px;
+            }
+
+            .made-in-usa {
+                position: absolute;
+                top: -1em;
+                left: -3em;
+                width: 150px;
+            }
+        }
+    }
+}
