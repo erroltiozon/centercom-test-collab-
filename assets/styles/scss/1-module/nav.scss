@@ -11,6 +11,7 @@
             height: 50px;
             width: 50px;
             position: relative;
+            z-index: 5;
 
             span {
                 background: $white;

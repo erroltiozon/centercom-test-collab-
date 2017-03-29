@@ -1,5 +1,6 @@
 // Base Styles
 @import '0-base/var.scss';
+@import '0-base/media-query.scss';
 @import '0-base/default.scss';
 
 
@@ -8,10 +9,12 @@
 @import '1-module/widget.scss';
 @import '1-module/nav.scss';
 @import '1-module/fb-link.scss';
+@import '1-module/close-button.scss';
 
 
 //Layout Styles
 @import '3-layout/loginpage.scss';
 @import '3-layout/homepage.scss';
 @import '3-layout/recipe-dashboard.scss';
+@import '3-layout/recipe-details.scss';
 @import '3-layout/article.scss';

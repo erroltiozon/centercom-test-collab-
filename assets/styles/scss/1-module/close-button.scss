@@ -1,0 +1,29 @@
+.close-button {
+    background: $red;
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    position: fixed;
+    z-index: 5;
+
+    span {
+        background: $white;
+        border-radius: 0;
+        display: inline-block;
+        height: 2px;
+        position: absolute;
+        left: 18%;
+        transition-duration: 200ms;
+        width: 65%;
+    }
+
+    .first {
+        transform: rotate(-45deg);
+        top: 24px;
+    }
+
+    .second {
+        transform: rotate(45deg);
+        top: 24px;
+    }
+}

@@ -3,6 +3,25 @@ module.exports = function(grunt) {
     grunt.initConfig ({
         pkg: grunt.file.readJSON('package.json'),
 
+        imagemin: {
+            dynamic: {
+                files: [{
+                    expand: true,
+                    cwd: 'assets/img/',
+                    src: ['**/*.{png,jpg,gif}'],
+                    dest: 'assets/img/'
+                }]
+            }
+        },
+
+        uncss: {
+            dist: {
+                file: {
+                    'assets/styles/main.css' : ['index.html', 'recipe-dashboard.html', 'article-page.html', 'recipe-details.html', 'sign-in.html']
+                }
+            }
+        },
+
         watch: {
             sass: {
                 files: ['assets/styles/scss/**/*.scss'],
@@ -36,8 +55,10 @@ module.exports = function(grunt) {
             }
         }
     });
+    grunt.loadNpmTasks('grunt-uncss');
+    grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
-    grunt.registerTask('default', ['sass', 'cssmin']);
+    grunt.registerTask('default', ['sass', 'cssmin', 'imagemin', 'uncss']);
 }

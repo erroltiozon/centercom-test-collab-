@@ -6,54 +6,71 @@
 
 		.form-content{
 			background: $white;
-			padding: 5em 3em 3em;
+			padding: 5em 1em;
 			float: none;
 			margin: 0 auto;
 
 
 			header{
 				@include oswald-regular;
-				margin-bottom: 1em;
+				margin-bottom: 2.5em;
 				line-height: 24px;
+				padding: 0 2.5em;
+
+				h1 {
+					margin-bottom: 1em;
+				}
+
+				p {
+					@include roboto-light;
+				}
 			}
 
-			.login-logo{
+			.made-in-usa{
 				width: 150px;
 			    left: -1em;
 			    position: absolute;
 			    top: -2%;
-			    z-index: 2;
 			}
 
-			ul {
-				padding: 20px;
-				max-width: 100%;
+			.form-list {
+				margin: 0;
 
 				li{
-					margin: 0 auto;
+					display: inline-block;
+					float: none;
+					margin-bottom: 1em;
 					text-align: left;
-					width: 85%;
 
 					label{
-						display: inherit;
-						font-weight: inherit;
-					    margin-top: 5px;
-					    margin-bottom: 0;
+						@include roboto-light;
+						display: block;
+						margin-bottom: .5em;
 					}
 
 					textarea{
+						border: 1px solid #ccc;
 						border-radius: 5px;
-						padding: 22px;
+						height: 100px;
+						padding: .5em 1em;
 						width: 100%;
 					}
 				}
 			}
 
 			button{
-				margin-top: 44px;
-			    margin-bottom: 25px;
+				@include roboto-bold;
+				background: $red;
+				border: none;
+				border-radius: 5px;
+				color: $white;
+				margin: 1em;
 			    width: 50%;
 			    padding: 1em 0;
+
+				&:hover {
+					background: darken($red, 10%);
+				}
 			}
 
 			p{

@@ -3,5 +3,7 @@
         $(this).toggleClass('active');
         $('.main-nav').toggleClass('active');
         $('.overlay').toggleClass('active');
+        $('.recipe-details .close-button').toggleClass('none');
+        $('.recipe-details .pagination-wrapper').toggleClass('none');
     });
 // });

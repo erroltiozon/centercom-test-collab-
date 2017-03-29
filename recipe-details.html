@@ -34,10 +34,10 @@
                 <a href="recipe-dashboard.html">Recept & Inspiration</a>
             </li>
             <li>
-                <a href="">Vår Historia</a>
+                <a href="article-page.html">Vår Historia</a>
             </li>
             <li>
-                <a href="">Kontakt</a>
+                <a href="sign-in.html">Kontakt</a>
             </li>
         </ul>
         <div class="follow-fb">
@@ -50,16 +50,130 @@
     <div class="overlay"></div>
     <!-- Start Content-Markup Here  -->
     <article class="main-wrapper recipe-details">
-            <section class="row">
-                <section class="recipe-cover-img col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                    <img class="img-responsive" src="assets/img/recipe_img_L_PLACEHOLDER.jpg" alt="">
-                </section>
-                <section class="details col-lg-6"></section>
+        <a class="close-button" href="recipe-dashboard.html">
+            <span class="first"></span>
+            <span class="second"></span>
+        </a>
+        <div class="pagination-wrapper col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <div class="col-lg-6 col-md-6 col-sm-6 hidden-xs">
+                <button class="prev text-left">
+                    <i class="glyphicon glyphicon-menu-left"></i>
+                    <aside>
+                        <span class="category">Lättlagad</span>
+                        <h5>Ray’s Kycklingburgare</h5>
+                    </aside>
+                </button>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 hidden-xs">
+                <button class="next text-right">
+                    <aside>
+                        <span class="category">Vegetarisk</span>
+                        <h5>Grillad Acocadomacka</h5>
+                    </aside>
+                    <i class="glyphicon glyphicon-menu-right"></i>
+                </button>
+            </div>
+            <div class="mobile-pagination hidden-lg hidden-md hidden-sm">
+                <button class="prev text-left">
+                    <i class="glyphicon glyphicon-menu-left"></i>
+                </button>
+                <button class="next text-right">
+                    <aside>
+                        <span class="category">Vegetarisk</span>
+                        <h5>Grillad Acocadomacka</h5>
+                    </aside>
+                    <i class="glyphicon glyphicon-menu-right"></i>
+                </button>
+            </div>
+        </div>
+        <section class="row">
+            <section class="recipe-cover-img col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <img class="img-responsive" src="assets/img/recipe_img_L_PLACEHOLDER.jpg" alt="">
             </section>
-            <a class="fb-link" href="">
-                <i class="icon-facebook"></i>
-                Tävla & Vinn en BBQ-smoker!
-            </a>
+            <section class="details col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <header>
+                    <h1>Ray's Burger</h1>
+                </header>
+                <aside class="widget-wrapper">
+                    <span class="per-serving widget">
+                        <i class="icon-servings"></i>
+                        4 pers
+                    </span>
+                    <span class="prep-time widget ">
+                        <i class="icon-time"></i>
+                        30 min
+                    </span>
+                    <button class="print widget">
+                        <i class="icon-print"></i>
+                        Print
+                    </button>
+                    <button class="share widget">
+                        <i class="icon-share"></i>
+                        Share
+                    </button>
+                </aside>
+                <div class="recipe-desc">
+                    <article>
+                        <p>Börja med att göra dressingen. Hacka picklesen grovt. Blanda sedan med majonnäs, crème fraiche och chilisås, smaka av med salt, peppar och eventuellt en nypa socker. Dela lök och vitlök i bitar och stek långsamt tills de är mjuka, låt svalna. Putsa bort senor och hinnor från köttet och smaksätt det med salt. Mal köttet i en köttkvarn tillsammans med lök, vitlök, örter och BBQ-sås. Smaksätt med svartpeppar. Forma fina burgare med hamburgerpress och låt dem vila några minuter. Grilla burgarna på het grill, rosta bröden och montera sedan med grönsaker och BBQ-sås till en fantastisk burgare.</p>
+                    </article>
+                </div>
+                <div class="ingredient-list-wrapper">
+                    <header>
+                        <h4>Ingredienser</h4>
+                        <hr>
+                    </header>
+                    <ul class="ingredient-list">
+                        <li>
+                            <span class="measurement">600 g</span>
+                            <span>högrevsfärs</span>
+                        </li>
+                        <li>
+                            <span class="measurement">2 små</span>
+                            <span>schalottenlökar</span>
+                        </li>
+                        <li>
+                            <span class="measurement">2 klyftor</span>
+                            <span>vitlök</span>
+                        </li>
+                        <li>
+                            <span class="measurement">2 nypor</span>
+                            <span>flingsalt, gärna Falksalt</span>
+                        </li>
+                        <li>
+                            <span class="measurement">2 kvistar</span>
+                            <span>färsk oregano</span>
+                        </li>
+                        <li>
+                            <span class="measurement">1 kvist</span>
+                            <span>timjan</span>
+                        </li>
+                        <li>
+                            <span class="measurement">2-4 msk</span>
+                            <span>BBQ sauce</span>
+                        </li>
+                    </ul>
+                    <ul class="ingredient-list dressing-list">
+                        <h5>Till dressingen:</h5>
+                        <li>
+                            <span class="measurement">2 dl</span>
+                            <span>pickles, avrunnen</span>
+                        </li>
+                        <li>
+                            <span class="measurement">1 dl</span>
+                            <span>majonäs, hemlagad eller färdigköpt</span>
+                        </li>
+                        <li>
+                            <span class="measurement">0,5 dl</span>
+                            <span>crème fraiche</span>
+                        </li>
+                        <li>
+                            <span class="measurement">2 msk</span>
+                            <span>sweet chilisås</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </section>
     </article>
     <!--  End   -->
     <script src="assets/components/jquery/dist/jquery.min.js"></script>

@@ -31,8 +31,9 @@ a {
   position: relative; }
 
 .widget-wrapper {
-  margin-top: 1.5em; }
+  margin: 1.5em 0; }
   .widget-wrapper .widget {
+    color: #1a1a1a;
     margin-right: .5em; }
   .widget-wrapper .print, .widget-wrapper .share {
     font-family: "Roboto Slab", serif;
@@ -52,7 +53,8 @@ a {
       display: inline-block;
       height: 50px;
       width: 50px;
-      position: relative; }
+      position: relative;
+      z-index: 5; }
       .nav-container div .burger-button span {
         background: #ffffff;
         border-radius: 0;
@@ -168,6 +170,29 @@ a {
   .main-wrapper .fb-link:hover {
     background: #006dd0; }
 
+.close-button {
+  background: #c00015;
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  position: fixed;
+  z-index: 5; }
+  .close-button span {
+    background: #ffffff;
+    border-radius: 0;
+    display: inline-block;
+    height: 2px;
+    position: absolute;
+    left: 18%;
+    transition-duration: 200ms;
+    width: 65%; }
+  .close-button .first {
+    transform: rotate(-45deg);
+    top: 24px; }
+  .close-button .second {
+    transform: rotate(45deg);
+    top: 24px; }
+
 .login-wrapper {
   position: relative; }
   .login-wrapper .row {
@@ -175,41 +200,55 @@ a {
     margin-bottom: 6em; }
     .login-wrapper .row .form-content {
       background: #ffffff;
-      padding: 5em 3em 3em;
+      padding: 5em 1em;
       float: none;
       margin: 0 auto; }
       .login-wrapper .row .form-content header {
         font-family: "Oswald", sans-serif;
         font-weight: 300;
-        margin-bottom: 1em;
-        line-height: 24px; }
-      .login-wrapper .row .form-content .login-logo {
+        margin-bottom: 2.5em;
+        line-height: 24px;
+        padding: 0 2.5em; }
+        .login-wrapper .row .form-content header h1 {
+          margin-bottom: 1em; }
+        .login-wrapper .row .form-content header p {
+          font-family: "Roboto Slab", serif;
+          font-weight: 300; }
+      .login-wrapper .row .form-content .made-in-usa {
         width: 150px;
         left: -1em;
         position: absolute;
-        top: -2%;
-        z-index: 2; }
-      .login-wrapper .row .form-content ul {
-        padding: 20px;
-        max-width: 100%; }
-        .login-wrapper .row .form-content ul li {
-          margin: 0 auto;
-          text-align: left;
-          width: 85%; }
-          .login-wrapper .row .form-content ul li label {
-            display: inherit;
-            font-weight: inherit;
-            margin-top: 5px;
-            margin-bottom: 0; }
-          .login-wrapper .row .form-content ul li textarea {
+        top: -2%; }
+      .login-wrapper .row .form-content .form-list {
+        margin: 0; }
+        .login-wrapper .row .form-content .form-list li {
+          display: inline-block;
+          float: none;
+          margin-bottom: 1em;
+          text-align: left; }
+          .login-wrapper .row .form-content .form-list li label {
+            font-family: "Roboto Slab", serif;
+            font-weight: 300;
+            display: block;
+            margin-bottom: .5em; }
+          .login-wrapper .row .form-content .form-list li textarea {
+            border: 1px solid #ccc;
             border-radius: 5px;
-            padding: 22px;
+            height: 100px;
+            padding: .5em 1em;
             width: 100%; }
       .login-wrapper .row .form-content button {
-        margin-top: 44px;
-        margin-bottom: 25px;
+        font-family: "Roboto Slab", serif;
+        font-weight: 700;
+        background: #c00015;
+        border: none;
+        border-radius: 5px;
+        color: #ffffff;
+        margin: 1em;
         width: 50%;
         padding: 1em 0; }
+        .login-wrapper .row .form-content button:hover {
+          background: #8d000f; }
       .login-wrapper .row .form-content p {
         margin: 5px; }
       .login-wrapper .row .form-content span {
@@ -289,6 +328,125 @@ a {
   position: absolute;
   top: 7em;
   width: 150px; }
+
+.recipe-details {
+  position: relative; }
+  .recipe-details .close-button {
+    right: 3em;
+    top: 1.5em;
+    transition: all .3s ease-in-out; }
+  .recipe-details .close-button.none {
+    opacity: 0; }
+  .recipe-details .pagination-wrapper {
+    float: none;
+    padding: 0;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    transition: all .3s ease-in-out;
+    z-index: 5; }
+    .recipe-details .pagination-wrapper div {
+      padding: 0; }
+      .recipe-details .pagination-wrapper div button {
+        border: none;
+        color: #ffffff;
+        padding: 1em 2em; }
+        .recipe-details .pagination-wrapper div button i, .recipe-details .pagination-wrapper div button aside {
+          display: inline-block; }
+        .recipe-details .pagination-wrapper div button i {
+          vertical-align: super; }
+        .recipe-details .pagination-wrapper div button aside {
+          margin: 0 .5em; }
+          .recipe-details .pagination-wrapper div button aside span {
+            font-family: "Roboto Slab", serif;
+            font-weight: 300; }
+          .recipe-details .pagination-wrapper div button aside h5 {
+            font-family: "Roboto Slab", serif;
+            font-weight: 700; }
+      .recipe-details .pagination-wrapper div .prev {
+        background: rgba(0, 69, 131, 0.9);
+        width: 100%; }
+      .recipe-details .pagination-wrapper div .next {
+        background: rgba(0, 55, 105, 0.9);
+        width: 100%; }
+    .recipe-details .pagination-wrapper .mobile-pagination .prev {
+      display: inline-block;
+      float: left;
+      height: 6em;
+      padding: 1em;
+      width: 10%; }
+    .recipe-details .pagination-wrapper .mobile-pagination .next {
+      display: inline-block;
+      height: 6em;
+      float: left;
+      padding: 1em;
+      width: 90%; }
+  .recipe-details .pagination-wrapper.none {
+    opacity: 0; }
+  .recipe-details .recipe-cover-img {
+    height: 100vh;
+    overflow: hidden;
+    position: relative; }
+    .recipe-details .recipe-cover-img img {
+      object-fit: cover;
+      position: fixed;
+      height: 100%;
+      width: 50%; }
+  @media screen and (min-width: 740px) and (max-width: 1024px) {
+    .recipe-details .recipe-cover-img {
+      position: relative;
+      height: 50vh; }
+      .recipe-details .recipe-cover-img img {
+        width: 100%;
+        height: 50vh; } }
+  @media screen and (min-width: 320px) and (max-width: 740px) {
+    .recipe-details .recipe-cover-img {
+      width: 100%;
+      height: auto; }
+      .recipe-details .recipe-cover-img img {
+        width: 100%;
+        height: 50vh;
+        position: static; } }
+  .recipe-details .details {
+    padding: 5em 6em 2em 4em;
+    position: relative;
+    z-index: 2; }
+    .recipe-details .details header h1 {
+      font-family: sans-serif;
+      font-weight: 700; }
+    .recipe-details .details .recipe-desc {
+      font-family: "Roboto Slab", serif;
+      font-weight: 300;
+      margin-bottom: 1.5em; }
+    .recipe-details .details .ingredient-list-wrapper header {
+      padding-right: 15em; }
+      .recipe-details .details .ingredient-list-wrapper header hr {
+        border-top: 1px solid #1a1a1a; }
+      .recipe-details .details .ingredient-list-wrapper header h4 {
+        font-family: sans-serif;
+        font-weight: 700; }
+    .recipe-details .details .ingredient-list {
+      margin-bottom: 2em; }
+      .recipe-details .details .ingredient-list h5 {
+        font-family: "Roboto Slab", serif;
+        font-weight: 300;
+        margin-bottom: 1em; }
+      .recipe-details .details .ingredient-list li {
+        margin-bottom: 1em; }
+        .recipe-details .details .ingredient-list li span {
+          font-family: "Roboto Slab", serif;
+          font-weight: 300; }
+        .recipe-details .details .ingredient-list li .measurement {
+          font-family: "Roboto Slab", serif;
+          font-weight: 700; }
+  @media screen and (min-width: 740px) and (max-width: 1024px) {
+    .recipe-details .details {
+      background: #ffffff;
+      z-index: 0; } }
+  @media screen and (min-width: 320px) and (max-width: 740px) {
+    .recipe-details .details {
+      padding: 2em 3em;
+      z-index: 0; } }
 
 .article-wrapper {
   position: relative; }
