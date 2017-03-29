@@ -1,6 +1,54 @@
 .widget-wrapper {
     margin: 1.5em 0;
 
+    .dropdown {
+        display: inline-block;
+
+        .dropdown-menu {
+            border: none;
+            box-shadow: none;
+            float: none;
+            min-width: auto;
+            padding: 0;
+
+            li a {
+                color: $white;
+                display: inline-block;
+                padding: 5px 8px;
+            }
+
+            li .fb {
+                background: $fb-color;
+                position: relative;
+
+                .triangle-up {
+                    width: 0;
+                    height: 0;
+                    border-left: 5px solid transparent;
+                    border-right: 5px solid transparent;
+                    border-bottom: 5px solid $fb-color;
+                    position: absolute;
+                    bottom: 30px;
+                    left: 13px;
+                }
+            }
+
+            li .twitter {
+                background: $twitter-color;
+            }
+
+            li .pinterest {
+                background: $pinterest-color;
+            }
+
+            li .mail {
+                background: $mail-color;
+                font-size: 16px;
+                padding: .3em 0.6em;
+            }
+        }
+    }
+
     .widget {
         color: $black;
         margin-right: .5em;

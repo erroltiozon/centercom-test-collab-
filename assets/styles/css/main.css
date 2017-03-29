@@ -32,6 +32,38 @@ a {
 
 .widget-wrapper {
   margin: 1.5em 0; }
+  .widget-wrapper .dropdown {
+    display: inline-block; }
+    .widget-wrapper .dropdown .dropdown-menu {
+      border: none;
+      box-shadow: none;
+      float: none;
+      min-width: auto;
+      padding: 0; }
+      .widget-wrapper .dropdown .dropdown-menu li a {
+        color: #ffffff;
+        display: inline-block;
+        padding: 5px 8px; }
+      .widget-wrapper .dropdown .dropdown-menu li .fb {
+        background: #3b5997;
+        position: relative; }
+        .widget-wrapper .dropdown .dropdown-menu li .fb .triangle-up {
+          width: 0;
+          height: 0;
+          border-left: 5px solid transparent;
+          border-right: 5px solid transparent;
+          border-bottom: 5px solid #3b5997;
+          position: absolute;
+          bottom: 30px;
+          left: 13px; }
+      .widget-wrapper .dropdown .dropdown-menu li .twitter {
+        background: #5ea9e0; }
+      .widget-wrapper .dropdown .dropdown-menu li .pinterest {
+        background: #b81818; }
+      .widget-wrapper .dropdown .dropdown-menu li .mail {
+        background: #70757b;
+        font-size: 16px;
+        padding: .3em 0.6em; }
   .widget-wrapper .widget {
     color: #1a1a1a;
     margin-right: .5em; }
