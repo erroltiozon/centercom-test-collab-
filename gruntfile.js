@@ -1,26 +1,8 @@
 'use strict'
+
 module.exports = function(grunt) {
     grunt.initConfig ({
         pkg: grunt.file.readJSON('package.json'),
-
-        imagemin: {
-            dynamic: {
-                files: [{
-                    expand: true,
-                    cwd: 'assets/img/',
-                    src: ['**/*.{png,jpg,gif}'],
-                    dest: 'assets/img/'
-                }]
-            }
-        },
-
-        uncss: {
-            dist: {
-                file: {
-                    'assets/styles/main.css' : ['index.html', 'recipe-dashboard.html', 'article-page.html', 'recipe-details.html', 'sign-in.html']
-                }
-            }
-        },
 
         watch: {
             sass: {
@@ -53,12 +35,51 @@ module.exports = function(grunt) {
                   ext: '.min.css'
                 }]
             }
+        },
+
+        copy: {
+            main: {
+                files: [
+                    { 
+                      expand: true,
+                      cwd: 'bower_components/bootstrap-sass/assets/javascripts/bootstrap',
+                      src: ['affix.js','transition.js', 'carousel.js'],
+                      dest: 'assets/js/bootstrap'
+                    }]
+            }
+        },
+
+        concat: {
+            swBuild: {
+                src: [
+                    'assets/js/bootstrap/affix.js',
+                    'assets/js/bootstrap/transition.js',
+                    'assets/js/bootstrap/carousel.js',
+                    'assets/js/nav.js'
+                ],
+                dest: 'assets/js/main.js',
+            },
+        },
+
+        uglify: {
+            dist: { 
+                files: { 
+                    'assets/js/main.min.js': ['assets/js/main.js'] 
+                } 
+            }
         }
+
     });
+    
     grunt.loadNpmTasks('grunt-uncss');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
-    grunt.registerTask('default', ['sass', 'cssmin', 'imagemin', 'uncss']);
+    grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.loadNpmTasks('grunt-contrib-concat');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
+
+    grunt.registerTask('default', ['sass', 'cssmin', 'uncss', 'imagemin', 'copy', 'concat', 'uglify']);
 }
