@@ -1,5 +1,5 @@
 {
-  "name": "Centercom Test",
+  "name": "centercomtest",
   "description": "This is for the Centercom Test",
   "main": "index.js",
   "authors": [
@@ -14,5 +14,12 @@
     "assets/components",
     "test",
     "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "^3.3.7"
+  },
+  "main": [
+    "bower_components/bootstrap-sass/assets/_bootstrap.scss",
+    "assets/javascripts/bootstrap.js"
   ]
 }
