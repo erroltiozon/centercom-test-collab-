@@ -15,7 +15,9 @@
 				@include oswald-regular;
 				margin-bottom: 2.5em;
 				line-height: 24px;
-				padding: 0 2.5em;
+				margin: 2.5em auto;
+				padding: 0;
+				width: 38vw;
 
 				h1 {
 					margin-bottom: 1em;
@@ -40,7 +42,9 @@
 					display: inline-block;
 					float: none;
 					margin-bottom: 1em;
+					padding: 0; //edited 04/03/17
 					text-align: left;
+					width: 30vw;//edited 04/03/17
 
 					label{
 						@include roboto-light;
@@ -78,7 +82,7 @@
 			}
 
 			span{
-				color: red;
+				color: #c00015;
 				font-weight: bold;
 			}
 		}
